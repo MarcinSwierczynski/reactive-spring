@@ -112,8 +112,6 @@ public class GatewayApplication {
                     .eager()
                     .build();
 
-//            RxReactiveStreams.toObservable(circuitBreakerPublisher);
-
             return ServerResponse.ok().body(circuitBreakerPublisher, String.class);
         });
     }
