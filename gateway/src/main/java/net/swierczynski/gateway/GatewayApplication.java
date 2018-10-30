@@ -78,11 +78,6 @@ public class GatewayApplication {
                 .build();
     }
 
-//    @Bean
-//    LoadBalancerExchangeFilterFunction loadBalancerExchangeFilterFunction(LoadBalancerClient client) {
-//        return new LoadBalancerExchangeFilterFunction(client);
-//    }
-
     @Bean
     WebClient client(LoadBalancerExchangeFilterFunction exchangeFilterFunction) {
         return WebClient
